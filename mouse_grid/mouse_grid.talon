@@ -1,6 +1,6 @@
 tag: user.mouse_grid_enabled
 -
-M grid:
+mouse grid on:
     user.grid_select_screen(1)
     user.grid_activate()
 
