@@ -14,6 +14,7 @@ action(user.messaging_channel_next): key(alt-down)
 action(user.messaging_unread_previous): key(alt-shift-up)
 action(user.messaging_unread_next): key(alt-shift-down)
     # Navigation
+please: user.messaging_open_channel_picker()
 (move | next) focus: key(ctrl-`)
 [next] (section | zone): key(f6)
 (previous | last) (section | zone): key(shift-f6)
