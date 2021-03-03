@@ -55,6 +55,13 @@ class user_actions:
     #     """selects the file"""
     #     actions.insert(path)
 
+    def terminal_insert(string: str):
+        actions.insert(string)
+
+    def terminal_run(string: str):
+        actions.insert(string)
+        actions.key("enter")
+
     def terminal_list_directories():
         actions.insert("ls")
         actions.key("enter")

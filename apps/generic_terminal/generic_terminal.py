@@ -6,6 +6,12 @@ mod.tag("generic_terminal", desc="Tag for enabling generic terminal commands")
 
 @mod.action_class
 class Actions:
+    def terminal_insert(string: str):
+        """Just type some text into the terminal"""
+
+    def terminal_run(string: str):
+        """Run a command"""
+
     def terminal_list_directories():
         """Lists directories"""
 
