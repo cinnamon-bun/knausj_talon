@@ -6,6 +6,13 @@ app: discord
 oldest unread: user.discord_oldest_unread()
 
 # UI
+next server: user.messaging.workspace.next()
+previous server: user.messaging_workspace_previous()
+next unread channel: user.messaging_unread_next()
+previous unread channel: user.messaging_unread_previous()
+next channel: user.messaging_channel_next()
+previous channel: user.messaging_channel_previous()
+please: user.messaging_open_channel_picker()
 toggle pins: user.discord_toggle_pins()
 toggle inbox: user.discord_toggle_inbox()
 toggle (members | member list): user.discord_toggle_members()
