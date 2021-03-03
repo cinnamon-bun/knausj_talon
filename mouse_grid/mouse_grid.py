@@ -149,7 +149,7 @@ class MouseSnapNine:
                         offset_y + height / 6 + row * height / 3,
                     )
                     background_rect = background_rect.inset(-4)
-                    paint.color = "9999995f"
+                    paint.color = "33333380"
                     paint.style = Paint.Style.FILL
                     canvas.draw_rect(background_rect)
                     paint.color = "00ff00ff"
