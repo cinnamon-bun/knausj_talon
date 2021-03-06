@@ -9,7 +9,8 @@ katie root: user.terminal_change_directory_root()
 clear screen: user.terminal_clear_screen()
 run last: user.terminal_run_last()
 kill all: user.terminal_kill_all()
-vim: user.terminal_insert("vim ")
-tree: user.terminal_insert("tree ")
-code: user.terminal_insert("code .")
-egg: user.terminal_insert("ag ")
+vim: "vim "
+tree: "tree -aif | grep "
+code: "code ."
+egg: "ag "
+cat: "cat "
