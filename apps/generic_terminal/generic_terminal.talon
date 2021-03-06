@@ -14,3 +14,4 @@ tree: "tree -aif | grep "
 code: "code ."
 egg: "ag "
 cat: "cat "
+control see: key(ctrl-c)
