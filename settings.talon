@@ -2,6 +2,7 @@
 settings():
     #adjust the scale of the imgui to my liking
     imgui.scale = 1.5
+    imgui.dark_mode = 1
     # enable if you'd like the picker gui to automatically appear when explorer has focus
     user.file_manager_auto_show_pickers = 0
     #set the max number of command lines per page in help
