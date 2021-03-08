@@ -13,5 +13,6 @@ vim: "vim "
 tree: "tree -aif | grep "
 code: "code ."
 egg: "ag "
-cat: "cat "
+pall: "pow "
+# cat: "cat "
 control see: key(ctrl-c)
