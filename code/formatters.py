@@ -27,6 +27,19 @@ def surround(by):
 
     return func
 
+def startWith(prefix):
+    def func(i, word, last):
+        if i == 0:
+            word = prefix + word
+        return word
+    return func
+
+def endWith(suffix):
+    def func(i, word, last):
+        if last:
+            word += suffix
+        return word
+    return func
 
 def format_phrase(m: Union[str, Phrase], fmtrs: str):
     global last_phrase, last_phrase_formatted
@@ -104,6 +117,13 @@ def every_word(word_func):
 
 
 formatters_dict = {
+    "LEADING_SPACE": (SEP, startWith(' ')),
+    "TRAILING_SPACE": (SEP, endWith(' ')),
+    "SNAKE_UPPER": (
+        NOSEP,
+        first_vs_rest(lambda w: w.upper(), lambda w: "_" + w.upper()),
+    ),
+
     "NOOP": (SEP, lambda i, word, _: word),
     "DOUBLE_UNDERSCORE": (NOSEP, first_vs_rest(lambda w: "__%s__" % w)),
     "PRIVATE_CAMEL_CASE": (NOSEP, first_vs_rest(lambda w: w, lambda w: w.capitalize())),
@@ -145,6 +165,10 @@ formatters_dict = {
 
 # This is the mapping from spoken phrases to formatters
 formatters_words = {
+    "leading": formatters_dict["LEADING_SPACE"],
+    "trailing": formatters_dict["TRAILING_SPACE"],
+    "upper snake": formatters_dict["SNAKE_UPPER"],
+ 
     "allcaps": formatters_dict["ALL_CAPS"],
     "alldown": formatters_dict["ALL_LOWERCASE"],
     "camel": formatters_dict["PRIVATE_CAMEL_CASE"],
